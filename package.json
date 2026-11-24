@@ -1,0 +1,24 @@
+{
+  "name": "almacen-tito-backend",
+  "version": "1.0.0",
+  "description": "Base de datos y lógica del servidor del sistema de inventario del almacén de don Tito, en [Supabase](https://supabase.com). Las pantallas están en [almacen-tito-front](https://github.com/kndre7247-ship-it/almacen-tito-front).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kndre7247-ship-it/almacen-tito-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kndre7247-ship-it/almacen-tito-backend/issues"
+  },
+  "homepage": "https://github.com/kndre7247-ship-it/almacen-tito-backend#readme",
+  "devDependencies": {
+    "supabase": "^3.3.0"
+  }
+}

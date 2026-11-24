@@ -15,14 +15,35 @@ Tablas, permisos por rol (RLS) y funciones se escriben **solo** en archivos de `
 
 ## Ambientes
 
-| Proyecto Supabase      | Para qué                             |
-| ---------------------- | ------------------------------------ |
-| `almacen-tito-pruebas` | Probar cambios                       |
-| `almacen-tito`         | Producción, solo cambios ya probados |
+| Proyecto Supabase      | Project ID             | Para qué                             |
+| ---------------------- | ---------------------- | ------------------------------------ |
+| `almacen-tito-pruebas` | `iohcmehzmgypzgopvuga` | Probar cambios                       |
+| `almacen-tito`         | `fukgtzjgjzkcekfcsnwj` | Producción, solo cambios ya probados |
 
-## Requisitos y comandos
+La CLI queda vinculada siempre a **pruebas**. Para subir a producción se vincula temporalmente y luego se vuelve a pruebas.
 
-Se completa en SCRUM-19 (Supabase CLI y migraciones).
+## Requisitos
+
+- [Node.js](https://nodejs.org) 20.19 o superior
+- Cuenta en Supabase con acceso a la organización **Almacén Tito**
+
+## Primera vez
+
+```bash
+npm install
+npx supabase login
+npx supabase link --project-ref iohcmehzmgypzgopvuga
+```
+
+## Comandos
+
+Los comandos que hablan con la base de datos llevan **`--remote`**. Sin eso, la CLI busca un Supabase local en Docker, que no usamos.
+
+| Comando                                | Qué hace                                            |
+| -------------------------------------- | --------------------------------------------------- |
+| `npx supabase migration new nombre`    | Crea un archivo de migración vacío con fecha y hora |
+| `npx supabase migration list --remote` | Compara migraciones locales con las del proyecto    |
+| `npx supabase db push --remote`        | Aplica las migraciones nuevas al proyecto vinculado |
 
 ## Forma de trabajo
 

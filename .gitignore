@@ -1,0 +1,13 @@
+# Dependencias (se reinstalan con npm install)
+node_modules/
+
+# Archivos temporales que crea la CLI de Supabase
+supabase/.temp/
+supabase/.branches/
+
+# Variables de entorno con claves
+.env
+.env.*
+
+# Archivos de Claude
+Claude outputs/
